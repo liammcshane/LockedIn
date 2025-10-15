@@ -1,4 +1,4 @@
-# LockedIn Chrome Extension
+# LockedIn (Chrome Extension)
 
 This extension prevents the user from skipping or clicking off of the currently playing YouTube video until it has finished. It also provides seperate controls to hide the suggestions bar, the comments section and the video description - if desired.
 
