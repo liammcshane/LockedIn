@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "LockedIn",
+  "version": "1.0",
+  "description": "Makes the user finish watching the current (YouTube) video before they can change to another one.",
+  "permissions": ["activeTab", "scripting", "storage", "alarms"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "lock.png",
+    "48": "lock.png",
+    "128": "lock.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*", "https://youtu.be/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["lock.png"],
+      "matches": ["https://www.youtube.com/*"]
+    }
+  ]
+}
